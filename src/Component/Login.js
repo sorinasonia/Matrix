@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import "../App.css";
-class Login extends React.Component {
 
+class Login extends React.Component {
 
 constructor(props){
 super(props)
@@ -17,16 +17,20 @@ super(props)
 
                     <div className = "All">
                     
-                        <div className = "email" className = "email" > <input type = "text" placeholder = "Email" /> </div> 
-                            <div className = "password"> <input  type = "text" placeholder = "Password" />  </div>
+                        <div className = "email" className = "email" > <input type = "text" placeholder = "Username | Email" /> </div> 
+                             <input  type = "text" className = "password" placeholder = "Password" />  
 
                             <button className = "continue"  ><Link style={{ textDecoration: 'none', color: 'white' }}
                              to='/Home' target='Login'  > Login  </Link></button> 
 
                         </div>
 
-            <b className = "bold" >Forgot your password  <a target="_blank" href= "https://accounts.google.com/signin/recovery?hl=en" > Click Here </a> </b>
+            <b className = "bold" > forgot your password <Link to = '/Recover' target = 'Login' > Click Here  </Link> </b>
+  
+                              
+                
                 </div>
+               
             </div>
       );
     }

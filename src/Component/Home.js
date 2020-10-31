@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom'
 import wheel from "../Asset/wheel.gif";
 import { Container, Row, Col, setConfiguration} from 'react-grid-system';
+
 setConfiguration({ defaultScreenClass: 'sm', gridColumns: 20 });
 
 class Home extends React.Component {
@@ -52,49 +53,40 @@ class Home extends React.Component {
 
     getMatrix = () =>{
       return this.state.matrix.map(e =><Col sm={4}>
-        <div className = "matrix" 
-        // style={{
-        //   width: 20, height: 20, backgroundColor: "#fff", border: '2px solid black', display: "flex",
-        //   justifyContent: "center",
-        //   alignItems: "center",
-        //   marginTop:5,
-        //   textSize: 15
-        // }}
-        >
-      <h1>{e}</h1>
-        </div>
-      </Col>);
+        <div className = "matrix">
+          <h1>{e}</h1>
+            </div>
+          </Col>);
     }
 
-    render() {
-      return (
-        
-        <div className="generators">
+      render() {
+        return (
+          
+          <div className="generators">
 
-            <button className = "continue"><Link style={{ textDecoration: 'none', color: 'white' }} to='/' target=''>back</Link></button>
-          <Container className = "con" >
-            <Row>
-                <this.getMatrix/>
-            </Row>
-          </Container>
+              <button className = "continue"><Link style={{ textDecoration: 'none', color: 'white' }} to='/' target=''>back</Link> </button>
+            <Container className = "con" >
+              <Row>
+                  <this.getMatrix/>
+              </Row>
+            </Container>
 
-          <div className ="inputContainer"
-          //  style={{margin:20}}
-           >
-            
-            <div className ="inputs">
-              <input className
-               style={{backgroundColor: 'crimson', color:'white', height: 60}}
-                type="submit" value="Generate Number" onClick={() => { this.generateMatrixs() }}  />
-              <this.wheel/>
-            </div>
-          <div> 
+              <div className ="inputContainer" >
+              
+                <div className ="inputs">
+                  <input className = "generator"
+                  // style={{backgroundColor: 'crimson', color:'white', height: 60}}
+                    type="submit" value="Generate Number" onClick={() => { this.generateMatrixs() }}  />
+                  <this.wheel/>
+                </div>
 
+              <div> 
+
+              </div>
             </div>
           </div>
-        </div>
-      );
-    }
+        );
+      }
   }
 
 export default Home;

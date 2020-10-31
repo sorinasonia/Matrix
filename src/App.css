@@ -16,9 +16,19 @@
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 }
 
+.Recover{
+  width: 100vw;
+  height: 100vh;
+  padding-top: 70px;
+  background: #0f2027; 
+  background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
 .loginn {
   font-size: 35px;
   color: black;
+  text-align: center;
 }
 
 .generators{
@@ -34,6 +44,18 @@
   background-color: white;
   width: 40vw;
   height: 60vh;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 20px;
+
+}
+
+.boxx {
+  color:  orange;
+  background-color: white;
+  width: 40vw;
+  height: 70vh;
   margin: auto;
   text-align: center;
   border-radius: 5px;
@@ -96,6 +118,14 @@ input{
   border-radius: 4px;
   width: 80%;
   min-width: 40%;
+  margin-bottom: 20px;
+}
+
+.generator {
+  background-color: crimson;
+  height: 59px;
+  color: white;
+  border-radius: 0px;
 }
 
 .continue {
@@ -109,7 +139,7 @@ input{
 
 .bold {
   color: black;
-  font-size: small;
+  font-size: medium;
   cursor: pointer;
 }
 
@@ -132,10 +162,7 @@ input{
   width: 20vw;
   border-radius: 15px;
   height: 60.6px;
-}
-
-.inputContainer{
-  margin: 20px 0px 0px 50px;
+  margin-left: 20px;
 }
 
 img {
@@ -144,3 +171,4 @@ img {
   height: 10vh;
   background-color: transparent;
 }
+
